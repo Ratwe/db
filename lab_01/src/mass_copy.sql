@@ -1,0 +1,4 @@
+COPY ACCOUNT FROM '/path/account.csv' DELIMITER ',' CSV HEADER;
+COPY MATCH FROM '/path/match.csv' DELIMITER ',' CSV HEADER;
+COPY GAME FROM '/path/game.csv' DELIMITER ',' CSV HEADER;
+COPY CHAMPION FROM '/path/champion.csv' DELIMITER ',' CSV HEADER;
