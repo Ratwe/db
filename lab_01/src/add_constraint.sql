@@ -1,9 +1,3 @@
--- Ограничение внешнего ключа для таблицы "GamePlayer" (ссылка на gameId)
-ALTER TABLE GamePlayer
-ADD CONSTRAINT fk_game
-FOREIGN KEY (gameId)
-REFERENCES Game(gameId);
-
 -- Ограничение уникальности для столбца "playerName" в таблице "Account"
 ALTER TABLE Account
 ADD CONSTRAINT unique_player_name

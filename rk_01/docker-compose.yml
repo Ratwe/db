@@ -1,0 +1,26 @@
+version: '3.7'
+
+networks:
+  backend-network:
+    driver: "bridge"
+
+services:
+  postgres:
+    container_name: bmstu_db_rk_01
+    image: postgres
+    environment:
+      POSTGRES_DB: bmstu_db_rk_01
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /data/postgres
+    volumes:
+      - 'postgres:/data/postgres'
+    ports:
+      - "5001:5432"
+    restart: unless-stopped
+    networks:
+      - backend-network
+
+volumes:
+    postgres:
+      
